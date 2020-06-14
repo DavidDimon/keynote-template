@@ -1,0 +1,64 @@
+import { Image } from 'mdx-deck'
+import { CodeSurfer } from 'code-surfer'
+import { dracula } from '@code-surfer/themes'
+import PropsDrilling from '../assets/propsdrilling.png'
+
+import { theme as customTheme } from './theme'
+
+export const theme = customTheme
+
+# Hello!
+
+---
+
+<ul>
+  <li>One</li>
+  <Steps>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+  </Steps>
+</ul>
+
+---
+
+# One
+
+<Steps>
+
+## Two
+
+### Three
+
+</Steps>
+
+---
+
+<CodeSurfer theme={dracula}>
+
+```js 1 title="Title" subtitle="Look at the first line"
+console.log(1)
+console.log(2)
+console.log(3)
+```
+
+```js 2 title="Title" subtitle="and now the second"
+console.log(1)
+console.log(2)
+console.log(3)
+```
+
+</CodeSurfer>
+
+---
+
+### image example
+
+<Image
+  src={PropsDrilling}
+  style={{ height: '70%', width: '70%' }}
+/>
+
+---
+
+# end
