@@ -13,7 +13,7 @@
   "scripts": {
     "start": "mdx-deck src/deck.mdx",
     "build": "mdx-deck build src/deck.mdx",
-    "publish:deck": "yarn build && gh-pages -d dist"
+    "publish:deck": "yarn build && gh-pages -d public"
   },
   "keywords": [
     "keynote",
