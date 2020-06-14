@@ -2,25 +2,28 @@
   "name": "keynote-template",
   "version": "1.0.0",
   "description": "keynote template",
+  "author": "david dimon",
+  "license": "ISC",
+  "keywords": [
+    "keynote",
+    "template",
+    "react"
+  ],
+  "scripts": {
+    "clean": "rm -rf .cache public",
+    "start": "mdx-deck slides/deck.mdx",
+    "build": "yarn clean && gatsby build --prefix-paths",
+    "publish:deck": "yarn build && gh-pages -d public"
+  },
   "dependencies": {
     "gh-pages": "^3.0.0",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "code-surfer": "^3.1.1",
+    "gatsby": "^2.23.3",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-theme-mdx-deck": "^4.1.0",
     "mdx-deck": "^4.1.1"
-  },
-  "scripts": {
-    "start": "mdx-deck src/deck.mdx",
-    "build": "mdx-deck build src/deck.mdx",
-    "publish:deck": "yarn build && gh-pages -d public"
-  },
-  "keywords": [
-    "keynote",
-    "template",
-    "react"
-  ],
-  "author": "david dimon",
-  "license": "ISC"
+  }
 }
